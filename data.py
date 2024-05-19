@@ -3,14 +3,14 @@ from sklearn.model_selection import train_test_split
 from ucimlrepo import fetch_ucirepo 
   
 # Importamos el data set iris (id 53) del repositorio UCI
-iris = fetch_ucirepo(id=53) 
+iris = fetch_ucirepo(id=53)
   
 # Extrae las características (features) y las etiquetas (targets)
 X = iris.data.features 
-y = iris.data.targets 
+y = iris.data.targets
   
 # metadata 
-# print(iris.metadata) 
+# print(iris.metadata)
 # # variable information 
 # print(iris.variables) 
 
@@ -23,6 +23,6 @@ train_test_split recibe diferentes parámetros:
 - random_state = asegura la reproducibilidad de la división de datos.
 - shuffle = genera un mezclado de datos de los datos (V/F)
 - stratify = se utiliza para que la división de datos mantenga la misma proporción de clases que el conjunto original
-
 """
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42, shuffle=True)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, shuffle=True)
