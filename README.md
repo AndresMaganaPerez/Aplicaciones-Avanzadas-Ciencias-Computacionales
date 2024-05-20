@@ -7,20 +7,20 @@ Para el proyecto estamos utilizando un dataset de Kaggle. El dataset que estamos
 
 El dataset contiene 410 imágenes de residuos etiquetados en varias categorías:
 
-Inmaduro: 411 imágenes.
+Inmaduro: 214 imágenes.
 
-Maduro: 420 imágenes.
+Maduro: 196 imágenes.
 
 Estas categorías se encuentran en sus correspondientes carpetas.
 
 Para mayor información, ingresar al siguiente link: [Cataract Classification Dataset](https://www.kaggle.com/datasets/akshayramakrishnan28/cataract-classification-dataset).
 
-## Instrucciones
+## Pasos
 # Obtener, generar o aumentar un set de datos.
 El data set utilizado para el proyecto fue obtenido en Kaggle, descargado y luego posicionado en una carpeta dentro de drive, para su siguiente manipulación dentro del código.
 
-# Hacer la separación de los sets de prueba y entrenamiento.
-Utilizamos la función de scikit-learn train-test-split, en la cual se puso los siguientes parámetros:
+# Preprocesado y Split de Entrenamiento y Validación.
+Con la función de keras, ImageDataGenerator, dentro de los parámetros, se declaró un balanceo para los datos de entrenamiento y prueba, de la siguiente forma:
 
 Entrenamiento: 80%.
 Prueba: 20%.
@@ -28,19 +28,13 @@ Prueba: 20%.
 ## Técnicas de escalamiento.
 Las técnicas de escalamiento usadas fueron las siguientes:
 
-rescale = 1/255: Normaliza los valores de los píxeles de las imágenes dividiéndolos por 255. Esto escala los valores de los píxeles para que estén en el rango [0, 1]. Asegura que los valores de los píxeles estén en una escala adecuada para el procesamiento por el modelo.
-
-rotation_range = 40: Aplica una rotación aleatoria a las imágenes dentro del rango especificado en grados. Introduce variabilidad en las imágenes.
-
-width_shift_range = 0.1: Realiza un desplazamiento horizontal aleatorio a las imágenes dentro del rango especificado. En este caso utilizamos 0.1 para que los desechos no salgan demasiado de la imagen.
-
-height_shift_range = 0.1: Realiza un desplazamiento vertical aleatorio a las imágenes dentro del rango especificado. En este caso utilizamos 0.1 para que los desechos no salgan demasiado de la imagen.
-
-zoom_range = 0.05: Aplica un zoom aleatorio a las imágenes dentro del rango especificado. Estamos utilizando 0.05 para crear imágenes variadas que no modifiquen demasiado la imagen original.
-
-horizontal_flip = True: Voltea horizontalmente aleatoriamente las imágenes. Agrega variabilidad al conjunto de datos al reflejar las imágenes horizontalmente.
-
-fill_mode='reflect': Especifica cómo rellenar los píxeles que pueden quedar vacíos después de aplicar transformaciones. Estamos utilizando reflect para rellenar con valores reflejados los píxeles que quedan vacíos para mantener la integridad visual de las imágenes.
+- rescale - redimensiona las imágenes en una escala de 0 a 255.
+- rotation_range - el rango de rotación que puede aplicar.
+- width_shift_range - cambios horizontales aleatorios.
+- height_shift_range - cambios verticales aleatorios.
+- shear_range - crea un estilo de distorsión aleatoria.
+- zoom_range - zooms aleatorios en las imágenes.
+- horizontal_flip - cambia la imagen horizontalmente con un 50% de probabilidad.
 
 ## Licencia
 Bajo la licencia de [CreativeCommons](https://creativecommons.org/licenses/by-sa/4.0/) por el uso del Cataract Classification Dataset.
