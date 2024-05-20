@@ -43,7 +43,7 @@ horizontal_flip = True: Voltea horizontalmente aleatoriamente las imágenes. Agr
 fill_mode='reflect': Especifica cómo rellenar los píxeles que pueden quedar vacíos después de aplicar transformaciones. Estamos utilizando reflect para rellenar con valores reflejados los píxeles que quedan vacíos para mantener la integridad visual de las imágenes.
 
 ## Licencia
-Bajo la licencia de CreativeCommons por el uso del Cataract Classification Dataset.
+Bajo la licencia de [CreativeCommons](https://creativecommons.org/licenses/by-sa/4.0/) por el uso del Cataract Classification Dataset.
 
 ## Autor
 Andrés Magaña Pérez - andresmagania02@gmail.com
