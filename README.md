@@ -70,6 +70,7 @@ Bajo la licencia de [CreativeCommons](https://creativecommons.org/licenses/by-sa
 
 ## Autor
 Instituto Tecnológico de Monterrey
+
 Andrés Magaña Pérez - andresmagania02@gmail.com
 
 ## Referencias
