@@ -63,6 +63,7 @@ Y esta fue la matriz de confusión de la ronda:
 
 ![image](https://github.com/AndresMaganaPerez/Aplicaciones-Avanzadas-Ciencias-Computacionales/assets/88801753/93c14fb2-3563-4688-a580-b0596443cf7a)
 
+"Poner matríz de testing también"
 
 ## Licencia
 Bajo la licencia de [CreativeCommons](https://creativecommons.org/licenses/by-sa/4.0/) por el uso del Cataract Classification Dataset.
@@ -73,4 +74,5 @@ Andrés Magaña Pérez - andresmagania02@gmail.com
 
 ## Referencias
 [1] L. Chen, S. Li, Q. Bai, J. Yang, S. Jiang, and Y. Miao, "Review of Image Classification Algorithms Based on Convolutional Neural Networks," Remote Sensing, vol. 13, no. 22, p. 4712, Nov. 2021. [Online]. Available: https://doi.org/10.3390/rs13224712.
+
 [2] K. Simonyan and A. Zisserman, "Very Deep Convolutional Networks for Large-Scale Image Recognition," arXiv preprint arXiv:1409.1556, Sep. 2014. [Online]. Available: https://arxiv.org/pdf/1409.1556
