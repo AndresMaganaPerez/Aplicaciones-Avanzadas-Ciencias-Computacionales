@@ -60,7 +60,10 @@ Para mi primer modelo de Deep Learning, creo que fue una arquitectura correcta y
 ## Resultados
 ### Primera Ronda
 En la primera ronda utilizamos un valor para las épocas de 10, y esto nos arrojó los siguientes valores:
+
 ![image](https://github.com/AndresMaganaPerez/Aplicaciones-Avanzadas-Ciencias-Computacionales/assets/88801753/06359d1b-a0e3-475d-8fd5-d3302a7c9451)
+
+Como podemos ver, el accuracy tiene un incremento gradual, que es algo que buscamos con esta métrica, ya que significa que el modelo va aprendiendo. Del otro modo, el loss va disminuyendo y se queda muy cerca del 0, dando una salida que buscamos también ya que significa que hay menos errores por parte del modelo.
 
 A la hora de probarlo con los valores de **testing** obtuvimos un accuracy del **84%**.
 
