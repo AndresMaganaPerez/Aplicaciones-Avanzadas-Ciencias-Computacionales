@@ -42,7 +42,16 @@ Las técnicas de escalamiento usadas fueron las siguientes:
 Estas técnicas se utilizaron con la función de [ImageDataGenerator](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator). Esta función crea imágenes modificadas con las técnicas determinadas, en el momento que se corre el código, sin generar espacio en el disco duro. Esto nos ayuda a obtener más datos para entrenar al modelo que creamos.
 
 ## Modelo VGG16 Convolutional Neural Network (CNN)
-Para crear nuestro modelo utilizamos una arquitectura conocida y estandarizada, la arquitectura **VGG16**[1][2]. Elegí utilizar esta arquitectura ya que a comparación de algunas otras no tiene tantas capas en el modelo, cuenta con 16, mientras otras llegan a contar con alrededor de 20 o hasta más de 100 capas. Además, dentro de estas arquitecturas, tiene un accuracy promedio del 74.4%. 
+Para crear nuestro modelo utilizamos una arquitectura conocida y estandarizada, la arquitectura **VGG16**[1][2]. Esta arquitectura proviene de Visual Geometry Group (VGG) de Oxford. En general las arquitecturas de VGG son bastante conocidas en el área de Visión Computacional y Deep Learning. Las Convolutional Layers se encargan de extraer diferentes características de las imágenes, como esquinas, texturas, etc. Entre más capas haya, más abstractas se vuelven estas características. Estas las va aprendiendo y las va dejando en tensores, que son de 3 dimensiones. Las capas densas se utilizan para seguir aprendiendo y después realizar las predicciones. Para que las características aprendidas pasen de la confolutional layers a las dense layers se utiliza la capa flatten, que convierte los tensores en un vector y que este pueda ser utilizado por las capas densas.
+
+El optimizador se utiliza para reducir la función de pérdida (loss). En este caso utilizamos * "Adaptive Moment Estimation" * o Adam como optimizador. Utilizamos este optimizador porque tiene bastante buen performance en múltiples tareas y es menos sensible a los cambios que se hagan en los hiperparámetros.
+
+La función de loss se le conoce también como función de objetivo, y se utiliza para saber qué tan bien son las predicciones con las verdaderas etiquetas. Para la función de loss, utilizamos binary_crossentropy ya que es un problema de clasificación binario. Esta da un resultado de presencia o ausencia de una clase. Otras funciones de loss como Mean Square Error o Categorical Crossentropy son utilizadas para otro tipos de tareas, específicamente Categorical Crossentropy se utiliza para clasificación de más de una clase.
+
+Por último, las métricas se utilizan para medir el performance del modelo. En este caso utilizamos accuracy el cual se enfoca en calcular el porcentaje de predicciones correctas. Otro tipo de métricas se llegan a utilizar con datasets desbalanceados. Ya que en esta práctica estamos aprendiendo por primera vez cómo hacer un modelo de Machine Learning, utilizamos accuracy, además de que estamos utilizando un data set balanceado.
+
+
+Elegí utilizar esta arquitectura ya que a comparación de algunas otras no tiene tantas capas en el modelo, cuenta con 16, mientras otras llegan a contar con alrededor de 20 o hasta más de 100 capas. Además, dentro de estas arquitecturas, tiene un accuracy promedio del 74.4%. 
 
 ![image](https://github.com/AndresMaganaPerez/Aplicaciones-Avanzadas-Ciencias-Computacionales/assets/88801753/bd153ce4-5031-4ce5-8184-30ff6f362cbd)
 
