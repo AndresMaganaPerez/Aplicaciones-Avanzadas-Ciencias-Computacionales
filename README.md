@@ -75,6 +75,13 @@ Y esta fue la matriz de confusión de la ronda:
 
 ![image](https://github.com/AndresMaganaPerez/Aplicaciones-Avanzadas-Ciencias-Computacionales/assets/88801753/93c14fb2-3563-4688-a580-b0596443cf7a)
 
+Precisión inmaduro: 0.84
+
+Recall inmaduro: 1.0
+
+Precisión maduro: 0.67
+
+Recall maduro: 0.67
 
 
 ## Licencia
